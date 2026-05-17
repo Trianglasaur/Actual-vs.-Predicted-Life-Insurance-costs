@@ -15,14 +15,13 @@ df["smoker"] = (df["smoker"] == "yes").astype(int)
  
 # life expectancy related predictors
 X = df[["age", "bmi", "smoker", "children"]]
-y = df["charges"] #<-- variale we want to predict
+y = df["charges"] #<-- variable we want to predict
  
 # 80% for training, 20% for testing (random_state fixes the shuffle)
 X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=42
-)
+    X, y, test_size=0.2, random_state=42)
  
-# Train the model
+# Training the model
 model = LinearRegression()
 model.fit(X_train, y_train)   #<-- learn from training data
  
@@ -32,7 +31,7 @@ mae = mean_absolute_error(y_test, y_pred)
 r2  = r2_score(y_test, y_pred)
  
 print(f"MAE : ${mae:,.0f}")    # average dollar error
-print(f"R²  : {r2:.3f}")      # 1.0 = perfect, 0 = no better than the mean
+print(f"R²  : {r2:.3f}")      # 1.0 = perfect, 0 = not any better than the mean
  
 # View coefficients (see how much each predictor shifts the predicted charge)
 coef_df = pd.DataFrame({
@@ -53,5 +52,4 @@ plt.title("Actual vs Predicted insurance charges" "\n"
 plt.tight_layout()
 plt.show()
 
-
-####INClude source ffrom kaggle somewhere 
+#Data Source: https://www.kaggle.com/datasets/mirichoi0218/insurance
