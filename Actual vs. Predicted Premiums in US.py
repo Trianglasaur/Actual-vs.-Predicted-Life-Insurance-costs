@@ -50,6 +50,8 @@ plt.ylabel("Predicted charges ($USD)")
 plt.title("Actual vs Predicted insurance charges" "\n"
 " from Life expectancy indicators: Age BMI Smoking Children")
 plt.tight_layout()
+plt.savefig("insurance_chart.png", dpi=150, bbox_inches="tight")
 plt.show()
+
 
 #Data Source: https://www.kaggle.com/datasets/mirichoi0218/insurance
