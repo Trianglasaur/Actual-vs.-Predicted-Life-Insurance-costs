@@ -38,7 +38,7 @@ Smoking is by far the biggest factor it adds over $23,000 to predicted charges c
 ---
 
 ## Source of Data
-[Medical Cost Personal Dataset — Kaggle](https://www.kaggle.com/datasets/mirichoi0218/insurance)
+[Insurance Cost Personal Dataset — Kaggle](https://www.kaggle.com/datasets/mirichoi0218/insurance)
 
 ---
 ## Chart
